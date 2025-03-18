@@ -1,0 +1,57 @@
+<section id="contato" class="contact-section">
+    <div class="container">
+      <h2 class="section-title">Entre em Contato</h2>
+      
+      <div class="contact-container">
+        <div class="contact-form">
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+              <label for="nome">Nome</label>
+              <input type="text" id="nome" formControlName="nome" class="form-control">
+              @if (contactForm.get('nome')?.invalid && contactForm.get('nome')?.touched) {
+                <span class="error-message">Nome é obrigatório</span>
+              }
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" formControlName="email" class="form-control">
+              @if (contactForm.get('email')?.invalid && contactForm.get('email')?.touched) {
+                <span class="error-message">Email válido é obrigatório</span>
+              }
+            </div>
+            
+            <div class="form-group">
+              <label for="mensagem">Mensagem</label>
+              <textarea id="mensagem" formControlName="mensagem" class="form-control" rows="5"></textarea>
+              @if (contactForm.get('mensagem')?.invalid && contactForm.get('mensagem')?.touched) {
+                <span class="error-message">Mensagem é obrigatória</span>
+              }
+            </div>
+            
+            <button type="submit" class="btn primary" [disabled]="contactForm.invalid">Enviar Mensagem</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  
+    <footer class="footer">
+      <div class="container">
+        <div class="social-links">
+          <a [href]="socialLinks.linkedin" target="_blank" class="social-icon">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a [href]="socialLinks.facebook" target="_blank" class="social-icon">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a [href]="socialLinks.instagram" target="_blank" class="social-icon">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a [href]="socialLinks.github" target="_blank" class="social-icon">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+        <p class="copyright">© {{ new Date().getFullYear() }} {{ nome }}. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+</section>

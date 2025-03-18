@@ -1,0 +1,43 @@
+<section class="tech-section">
+    <div class="container">
+      <h2 class="section-title">Tecnologias</h2>
+      
+      <swiper-container
+        slides-per-view="5"
+        space-between="10"
+        autoplay='{
+          "delay": 2500,
+          "disableOnInteraction": false
+        }'
+        loop="true"
+        breakpoints='{
+          "320": {
+            "slidesPerView": 2,
+            "spaceBetween": 10
+          },
+          "480": {
+            "slidesPerView": 3,
+            "spaceBetween": 10
+          },
+          "768": {
+            "slidesPerView": 4,
+            "spaceBetween": 10
+          },
+          "1024": {
+            "slidesPerView": 5,
+            "spaceBetween": 10
+          }
+        }'>
+        
+        @for (tech of technologies; track tech.nome) {
+          <swiper-slide>
+            <div class="tech-logo">
+              <img [src]="tech.logo" [alt]="tech.nome">
+              <p>{{ tech.nome }}</p>
+            </div>
+          </swiper-slide>
+        }
+        
+      </swiper-container>
+    </div>
+</section>

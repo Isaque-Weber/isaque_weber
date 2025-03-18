@@ -1,0 +1,40 @@
+<section id="projetos" class="projects-section">
+    <div class="container">
+      <h2 class="section-title">Meus Projetos</h2>
+      
+      <swiper-container
+        slides-per-view="3"
+        space-between="20"
+        navigation="true"
+        pagination="true"
+        breakpoints='{
+          "320": {
+            "slidesPerView": 1,
+            "spaceBetween": 10
+          },
+          "768": {
+            "slidesPerView": 2,
+            "spaceBetween": 15
+          },
+          "1024": {
+            "slidesPerView": 3,
+            "spaceBetween": 20
+          }
+        }'>
+    
+        <swiper-slide *ngFor="let projeto of projetos">
+          <div class="projeto-card">
+            <div class="projeto-imagem">
+              <img [src]="projeto.imagem" [alt]="projeto.titulo">
+            </div>
+            <div class="projeto-conteudo">
+              <h3>{{ projeto.titulo }}</h3>
+              <p>{{ projeto.descricao }}</p>
+              <a [href]="projeto.link" target="_blank" class="btn-projeto">Ver projeto</a>
+            </div>
+          </div>
+        </swiper-slide>
+        
+      </swiper-container>
+    </div>
+  </section>
