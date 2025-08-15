@@ -9,7 +9,7 @@ Portfolio profissional desenvolvido com React + TypeScript + TailwindCSS, aprese
 - **Animações:** Framer Motion
 - **Formulários:** React Hook Form
 - **Icons:** Lucide React
-- **Build Tool:** Vite
+- **Build Tool:** Next.js
 - **Email Service:** EmailJS (configurável)
 
 ## ✨ Funcionalidades
@@ -74,7 +74,7 @@ npm run dev
 ```bash
 npm run dev      # Servidor de desenvolvimento
 npm run build    # Build de produção
-npm run preview  # Preview do build
+npm run start    # Servidor de produção
 npm run lint     # Verificação de código
 ```
 
@@ -92,7 +92,7 @@ npm run lint     # Verificação de código
 1. Faça login na [Netlify](https://netlify.com)
 2. Conecte seu repositório
 3. Configure build command: `npm run build`
-4. Configure publish directory: `dist`
+4. Configure publish directory: `out`
 
 ### Configuração do EmailJS (Opcional)
 
@@ -102,9 +102,9 @@ Para o formulário de contato funcionar com EmailJS:
 2. Configure um serviço de email
 3. Adicione as variáveis de ambiente:
    ```env
-   VITE_EMAILJS_SERVICE_ID=your_service_id
-   VITE_EMAILJS_TEMPLATE_ID=your_template_id
-   VITE_EMAILJS_PUBLIC_KEY=your_public_key
+   NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_service_id
+   NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=your_template_id
+   NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_public_key
    ```
 
 ## 🎨 Personalização

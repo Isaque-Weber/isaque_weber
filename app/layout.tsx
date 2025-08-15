@@ -37,7 +37,6 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <head>
-        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
       </head>
       <body className={`${inter.className} font-sans antialiased`}>
         {children}
