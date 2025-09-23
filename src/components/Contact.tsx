@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useForm } from 'react-hook-form';
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
-import { contactInfo } from '../data/portfolio';
-import { ContactFormData } from '../types';
+import { contactInfo } from '@/data/portfolio';
+import { ContactFormData } from '@/types';
 
 interface ContactProps {
   className?: string;
@@ -26,13 +26,20 @@ const Contact: React.FC<ContactProps> = ({ className = '' }) => {
     setSubmitStatus('idle');
 
     try {
-      // Simulate form submission (replace with EmailJS or your preferred service)
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
-      // Mock successful submission
-      console.log('Form data:', data);
-      setSubmitStatus('success');
-      reset();
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        reset();
+      } else {
+        setSubmitStatus('error');
+      }
     } catch (error) {
       console.error('Error submitting form:', error);
       setSubmitStatus('error');
@@ -198,31 +205,33 @@ const Contact: React.FC<ContactProps> = ({ className = '' }) => {
             </h3>
 
             {/* Success/Error Messages */}
-            {submitStatus === 'success' && (
-              <motion.div
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="mb-6 p-4 bg-green-100 dark:bg-green-900/30 border border-green-200 dark:border-green-800 rounded-lg flex items-center space-x-3"
-              >
-                <CheckCircle className="text-green-600 dark:text-green-400" size={20} />
-                <span className="text-green-700 dark:text-green-300">
-                  Mensagem enviada com sucesso! Entrarei em contato em breve.
-                </span>
-              </motion.div>
-            )}
+            <div className="min-h-[60px]">
+              {submitStatus === 'success' && (
+                <motion.div
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="mb-6 p-4 bg-green-100 dark:bg-green-900/30 border border-green-200 dark:border-green-800 rounded-lg flex items-center space-x-3"
+                >
+                  <CheckCircle className="text-green-600 dark:text-green-400" size={20} />
+                  <span className="text-green-700 dark:text-green-300">
+                    Mensagem enviada com sucesso! Entrarei em contato em breve.
+                  </span>
+                </motion.div>
+              )}
 
-            {submitStatus === 'error' && (
-              <motion.div
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="mb-6 p-4 bg-red-100 dark:bg-red-900/30 border border-red-200 dark:border-red-800 rounded-lg flex items-center space-x-3"
-              >
-                <AlertCircle className="text-red-600 dark:text-red-400" size={20} />
-                <span className="text-red-700 dark:text-red-300">
-                  Ocorreu um erro ao enviar a mensagem. Tente novamente.
-                </span>
-              </motion.div>
-            )}
+              {submitStatus === 'error' && (
+                <motion.div
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="mb-6 p-4 bg-red-100 dark:bg-red-900/30 border border-red-200 dark:border-red-800 rounded-lg flex items-center space-x-3"
+                >
+                  <AlertCircle className="text-red-600 dark:text-red-400" size={20} />
+                  <span className="text-red-700 dark:text-red-300">
+                    Ocorreu um erro ao enviar a mensagem. Tente novamente.
+                  </span>
+                </motion.div>
+              )}
+            </div>
 
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
