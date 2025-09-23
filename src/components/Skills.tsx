@@ -1,8 +1,8 @@
 'use client';
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { skills } from '../data/portfolio';
-import { Skill } from '../types';
+import { skills } from '@/data/portfolio';
+import { Skill } from '@/types';
 
 interface SkillsProps {
   className?: string;

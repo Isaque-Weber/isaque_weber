@@ -2,8 +2,8 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, Github, Eye, Filter } from 'lucide-react';
-import { projects } from '../data/portfolio';
-import { Project } from '../types';
+import { projects } from '@/data/portfolio';
+import { Project } from '@/types';
 
 interface ProjectsProps {
   className?: string;
