@@ -2,7 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ChevronDown, Download, Mail } from 'lucide-react';
-import { personalInfo, contactInfo } from '../data/portfolio';
+import { personalInfo, contactInfo } from '@/data/portfolio';
 
 interface HeroProps {
   className?: string;
@@ -30,26 +30,38 @@ const Hero: React.FC<HeroProps> = ({ className = '' }) => {
     >
       {/* Background Animation */}
       <div className="absolute inset-0 overflow-hidden">
-        {[...Array(6)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-72 h-72 bg-primary-200/20 dark:bg-primary-800/20 rounded-full blur-xl"
-            animate={{
-              x: [0, 100, 0],
-              y: [0, -100, 0],
-              scale: [1, 1.2, 1],
-            }}
-            transition={{
-              duration: 10 + i * 2,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
-          />
-        ))}
+        {[...Array(6)].map((_, i) => {
+          // Use deterministic positioning based on index to avoid hydration mismatch
+          const positions = [
+            { left: '10%', top: '20%' },
+            { left: '80%', top: '10%' },
+            { left: '60%', top: '70%' },
+            { left: '20%', top: '80%' },
+            { left: '90%', top: '60%' },
+            { left: '40%', top: '30%' }
+          ];
+          
+          return (
+            <motion.div
+              key={i}
+              className="absolute w-72 h-72 bg-primary-200/20 dark:bg-primary-800/20 rounded-full blur-xl"
+              animate={{
+                x: [0, 100, 0],
+                y: [0, -100, 0],
+                scale: [1, 1.2, 1],
+              }}
+              transition={{
+                duration: 10 + i * 2,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+              style={{
+                left: positions[i].left,
+                top: positions[i].top,
+              }}
+            />
+          );
+        })}
       </div>
 
       <div className="container-custom section-padding relative z-10">
@@ -116,14 +128,18 @@ const Hero: React.FC<HeroProps> = ({ className = '' }) => {
                 <span>Entre em Contato</span>
               </motion.button>
               
-              <motion.button
+              <motion.a
+                href={personalInfo.resumeUrl}
+                download
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="btn-secondary flex items-center justify-center space-x-2"
               >
                 <Download size={20} />
                 <span>Download CV</span>
-              </motion.button>
+              </motion.a>
             </motion.div>
 
             {/* Social Links */}
