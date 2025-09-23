@@ -2,7 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, Phone, Heart } from 'lucide-react';
-import { contactInfo } from '../data/portfolio';
+import { contactInfo } from '@/data/portfolio';
 
 interface FooterProps {
   className?: string;
