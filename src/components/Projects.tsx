@@ -4,6 +4,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, Github, Eye, Filter } from 'lucide-react';
 import { projects } from '@/data/portfolio';
 import { Project } from '@/types';
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Navigation, Pagination } from 'swiper/modules'
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
+import Image from "next/image";
 
 interface ProjectsProps {
   className?: string;
@@ -59,12 +65,14 @@ const Projects: React.FC<ProjectsProps> = ({ className = '' }) => {
     >
       {/* Project Image */}
       <div className="relative overflow-hidden">
-        <img
-          src={project.image}
-          alt={project.title}
-          className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <Image
+              src={project.image}
+              alt={project.title}
+              width={600}
+              height={400}
+              className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           <div className="absolute bottom-4 left-4 right-4 flex justify-between items-end">
             <div className="flex space-x-2">
               {project.liveUrl && (
@@ -255,12 +263,38 @@ const Projects: React.FC<ProjectsProps> = ({ className = '' }) => {
                 onClick={(e) => e.stopPropagation()}
               >
                 <div className="relative">
-                  <img
-                    src={selectedProject.image}
-                    alt={selectedProject.title}
-                    className="w-full h-64 object-cover rounded-t-2xl"
-                  />
-                  <button
+                    {/* Carrossel de imagens */}
+                    {(selectedProject.gallery && selectedProject.gallery.length > 0) ? (
+                        <Swiper
+                            modules={[Navigation, Pagination]}
+                            navigation
+                            pagination={{ clickable: true }}
+                            spaceBetween={20}
+                            slidesPerView={1}
+                            className="w-full h-80 rounded-t-2xl"
+                        >
+                            {[selectedProject.image, ...selectedProject.gallery].map((img, idx) => (
+                                <SwiperSlide key={idx}>
+                                    <Image
+                                        src={img}
+                                        alt={`${selectedProject.title} screenshot ${idx + 1}`}
+                                        width={1200}
+                                        height={500}
+                                        className="w-full h-80 object-cover rounded-t-2xl"
+                                    />
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
+                    ) : (
+                        <Image
+                            src={selectedProject.image}
+                            alt={selectedProject.title}
+                            width={1200}
+                            height={500}
+                            className="w-full h-80 object-cover rounded-t-2xl"
+                        />
+                    )}
+                    <button
                     onClick={() => setSelectedProject(null)}
                     className="absolute top-4 right-4 w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-colors duration-200"
                   >
