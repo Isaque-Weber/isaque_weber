@@ -76,7 +76,7 @@ export const projects: Project[] = [
         title: "Site CADPOG",
         description: "Plataforma web para aluguel de brinquedos para festas infantis, com catálogo de produtos, sistema de reservas, depoimentos de clientes e informações sobre a empresa.",
         technologies: ["Next.js", "React", "TypeScript", "TailwindCSS", "Node.js"],
-        image: "/loquebrinque/cover.png",
+        image: "/loquebrinque/hero.png",
         gallery: [
             "/loquebrinque/about.png",
             "/loquebrinque/brinquedos.png",
