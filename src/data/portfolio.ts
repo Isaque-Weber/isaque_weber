@@ -72,13 +72,21 @@ export const projects: Project[] = [
         featured: true
     },
     {
-        id: '2',
-        title: 'Dashboard de Monitoramento',
-        description: 'Interface administrativa desenvolvida com NextJS e NestJS para monitoramento em tempo real de sistemas e métricas de performance.',
-        technologies: ['NextJS', 'NestJS', 'TypeORM', 'PostgreSQL'],
-        image: 'https://via.placeholder.com/600x400/0ea5e9/ffffff?text=Dashboard',
-        liveUrl: '#',
-        githubUrl: '#',
+        id: "loquebrinque",
+        title: "Site CADPOG",
+        description: "Plataforma web para aluguel de brinquedos para festas infantis, com catálogo de produtos, sistema de reservas, depoimentos de clientes e informações sobre a empresa.",
+        technologies: ["Next.js", "React", "TypeScript", "TailwindCSS", "Node.js"],
+        image: "/loquebrinque/cover.png",
+        gallery: [
+            "/loquebrinque/about.png",
+            "/loquebrinque/brinquedos.png",
+            "/loquebrinque/como-funciona.png",
+            "/loquebrinque/contato.png",
+            "/loquebrinque/depoimentos.png",
+            "/loquebrinque/hero.png"
+        ],
+        liveUrl: "https://loquebrinque.vercel.app",
+        githubUrl: "https://github.com/Isaque-Weber/loque-brinque",
         featured: true
     },
     {
