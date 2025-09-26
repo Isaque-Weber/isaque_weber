@@ -73,7 +73,7 @@ export const projects: Project[] = [
     },
     {
         id: "loquebrinque",
-        title: "Site CADPOG",
+        title: "Site Loque Brinque",
         description: "Plataforma web para aluguel de brinquedos para festas infantis, com catálogo de produtos, sistema de reservas, depoimentos de clientes e informações sobre a empresa.",
         technologies: ["Next.js", "React", "TypeScript", "TailwindCSS", "Node.js"],
         image: "/loquebrinque/hero.png",
@@ -89,24 +89,4 @@ export const projects: Project[] = [
         githubUrl: "https://github.com/Isaque-Weber/loque-brinque",
         featured: true
     },
-    {
-        id: '3',
-        title: 'API de Processamento de Linguagem Natural',
-        description: 'API REST desenvolvida com Fastify e Python para processamento e análise de texto usando técnicas de NLP e IA.',
-        technologies: ['Fastify', 'Python', 'NLP', 'Docker'],
-        image: 'https://via.placeholder.com/600x400/0ea5e9/ffffff?text=NLP+API',
-        liveUrl: '#',
-        githubUrl: '#',
-        featured: false
-    },
-    {
-        id: '4',
-        title: 'Plataforma de E-learning',
-        description: 'Sistema completo de ensino online com React, TypeScript e banco de dados relacional para gestão de cursos e estudantes.',
-        technologies: ['React', 'TypeScript', 'HTML', 'CSS', 'TypeORM'],
-        image: 'https://via.placeholder.com/600x400/0ea5e9/ffffff?text=E-Learning',
-        liveUrl: '#',
-        githubUrl: '#',
-        featured: false
-    }
 ];
