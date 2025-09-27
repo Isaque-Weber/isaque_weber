@@ -1,8 +1,9 @@
 'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ChevronDown, Download, Mail } from 'lucide-react';
+import { ChevronDown, Mail } from 'lucide-react';
 import { personalInfo, contactInfo } from '@/data/portfolio';
+import ResumeList from './ResumeList';
 
 interface HeroProps {
   className?: string;
@@ -128,18 +129,11 @@ const Hero: React.FC<HeroProps> = ({ className = '' }) => {
                 <span>Entre em Contato</span>
               </motion.button>
               
-              <motion.a
-                href={personalInfo.resumeUrl}
-                download
-                target="_blank"
-                rel="noopener noreferrer"
+              <motion.div 
                 whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="btn-secondary flex items-center justify-center space-x-2"
-              >
-                <Download size={20} />
-                <span>Download CV</span>
-              </motion.a>
+                whileTap={{ scale: 0.95 }} >
+                <ResumeList />
+              </motion.div>
             </motion.div>
 
             {/* Social Links */}
