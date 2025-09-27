@@ -90,3 +90,10 @@ export const projects: Project[] = [
         featured: true
     },
 ];
+
+export const resumes = [
+    { name: 'Currículo Desenvolvedor Fullstack', path: '/documents/Isaque_Weber_Dev_Fullstack.pdf' },
+    { name: 'Currículo Foco em Backend', path: '/documents/Isaque_Weber_Backend.pdf' },
+    { name: 'Currículo Foco em Frontend', path: '/documents/Isaque_Weber_Frontend.pdf' },
+];
+
