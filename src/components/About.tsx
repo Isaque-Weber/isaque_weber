@@ -104,7 +104,7 @@ const About: React.FC<AboutProps> = ({ className = '' }) => {
                   viewport={{ once: true }}
                   className="text-3xl font-bold gradient-text"
                 >
-                  3+
+                  1+
                 </motion.div>
                 <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">Anos de Experiência</p>
               </div>
