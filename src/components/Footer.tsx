@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail, Phone, Heart } from 'lucide-react';
+import {Github, Linkedin, Mail, Phone, Heart, FacebookIcon} from 'lucide-react';
 import { contactInfo } from '@/data/portfolio';
 
 interface FooterProps {
@@ -33,7 +33,13 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
       href: `tel:+55${contactInfo.phone}`,
       icon: Phone,
       color: 'hover:text-green-500'
-    }
+    },
+    {
+      name: 'Facebook',
+      href: `https://${contactInfo.facebook}`,
+      icon: FacebookIcon,
+      color: 'hover:text-blue-600'
+    },
   ];
 
   const currentYear = new Date().getFullYear();
@@ -63,7 +69,7 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="text-gray-600 dark:text-gray-400 max-w-sm"
             >
-              Desenvolvedor especializado em soluções aplicadas à IA para democratização de tecnologia.
+              Desenvolvedor especializado em soluções aplicadas à IA, para democratização de tecnologia.
             </motion.p>
           </div>
 
