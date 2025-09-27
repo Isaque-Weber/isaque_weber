@@ -1,5 +1,5 @@
 import { PersonalInfo, ContactInfo, Skill, Project } from '@/types';
-import profileImage from '@/assets/images/Perfil2.jpg';
+import profileImage from '../../public/images/Perfil2.jpg';
 
 export const personalInfo: PersonalInfo = {
     name: 'Isaque Weber',
@@ -13,7 +13,8 @@ export const contactInfo: ContactInfo = {
     email: 'isaque.weber5@gmail.com',
     phone: '21967398707',
     linkedin: 'linkedin.com/in/isaque-weber',
-    github: 'github.com/isaque-weber'
+    github: 'github.com/isaque-weber',
+    facebook: 'facebook.com/isaque.weber.9',
 };
 
 export const skills: Skill[] = [
@@ -87,7 +88,7 @@ export const projects: Project[] = [
         ],
         liveUrl: "https://loquebrinque.vercel.app",
         githubUrl: "https://github.com/Isaque-Weber/loque-brinque",
-        featured: true
+        featured: false
     },
 ];
 
