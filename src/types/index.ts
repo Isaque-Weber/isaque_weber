@@ -56,3 +56,12 @@ export interface AnimationProps {
   duration?: number;
   children: React.ReactNode;
 }
+
+export interface FormationInfo {
+  id: string;
+  course: string;
+  level: string;
+  institution?: string;
+  status: 'Concluído' | 'Em andamento' | 'Trancado';
+  year?: string;
+}

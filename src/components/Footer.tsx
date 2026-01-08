@@ -30,7 +30,7 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
     },
     {
       name: 'Phone',
-      href: `tel:+55${contactInfo.phone}`,
+      href: `https://wa.me/55${contactInfo.phone}`,
       icon: Phone,
       color: 'hover:text-green-500'
     },
@@ -69,7 +69,7 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="text-gray-600 dark:text-gray-400 max-w-sm"
             >
-              Desenvolvedor especializado em soluções aplicadas à IA, para democratização de tecnologia.
+              Desenvolvedor especializado em soluções aplicadas à IA, democratizando tecnologia.
             </motion.p>
           </div>
 

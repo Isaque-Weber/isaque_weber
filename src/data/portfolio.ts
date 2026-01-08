@@ -1,4 +1,4 @@
-import { PersonalInfo, ContactInfo, Skill, Project } from '@/types';
+import { PersonalInfo, FormationInfo, ContactInfo, Skill, Project } from '@/types';
 import profileImage from '../../public/images/Perfil2.jpg';
 
 export const personalInfo: PersonalInfo = {
@@ -96,5 +96,29 @@ export const resumes = [
     { name: 'Currículo Desenvolvedor Fullstack', path: '/documents/Isaque_Weber_Dev_Fullstack.pdf' },
     { name: 'Currículo Foco em Backend', path: '/documents/Isaque_Weber_Backend.pdf' },
     { name: 'Currículo Foco em Frontend', path: '/documents/Isaque_Weber_Frontend.pdf' },
+];
+
+export const formation: FormationInfo[] = [
+    {
+        id: "1",
+        course: "Data Science",
+        level: "Pós-graduação",
+        institution: "UniAmérica",
+        status: "Em andamento"
+    },
+    {
+        id: "2",
+        course: "Análise e Desenvolvimento de Sistemas",
+        level: "Graduação",
+        institution: "UniAmérica",
+        status: "Concluído"
+    },
+    {
+        id: "3",
+        course: "Administração",
+        level: "Ensino Médio Técnico",
+        institution: "C.E. Erich Walter Heine",
+        status: "Concluído"
+    }
 ];
 
