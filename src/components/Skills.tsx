@@ -16,7 +16,8 @@ const Skills: React.FC<SkillsProps> = ({ className = '' }) => {
     { key: 'frontend', label: 'Frontend' },
     { key: 'backend', label: 'Backend' },
     { key: 'database', label: 'Database' },
-    { key: 'tools', label: 'Ferramentas' }
+    { key: 'tools', label: 'Ferramentas' },
+    { key: 'data', label: 'Data Science' }
   ];
 
   const filteredSkills = activeCategory === 'all' 
@@ -64,6 +65,7 @@ const Skills: React.FC<SkillsProps> = ({ className = '' }) => {
           skill.category === 'frontend' ? 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300' :
           skill.category === 'backend' ? 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300' :
           skill.category === 'database' ? 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300' :
+          skill.category === 'data' ? 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300' :
           'bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300'
         }`}>
           {categories.find(cat => cat.key === skill.category)?.label}
@@ -136,13 +138,14 @@ const Skills: React.FC<SkillsProps> = ({ className = '' }) => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
-          className="mt-16 grid grid-cols-1 md:grid-cols-4 gap-8"
+          className="mt-16 grid grid-cols-1 md:grid-cols-5 gap-8"
         >
           {[
             { label: 'Frontend', count: skills.filter(s => s.category === 'frontend').length, color: 'blue' },
             { label: 'Backend', count: skills.filter(s => s.category === 'backend').length, color: 'green' },
             { label: 'Database', count: skills.filter(s => s.category === 'database').length, color: 'purple' },
-            { label: 'Ferramentas', count: skills.filter(s => s.category === 'tools').length, color: 'orange' }
+            { label: 'Ferramentas', count: skills.filter(s => s.category === 'tools').length, color: 'orange' },
+            { label: 'Data Science', count: skills.filter(s => s.category === 'data').length, color: 'indigo' }
           ].map((item, index) => (
             <motion.div
               key={item.label}
@@ -161,6 +164,7 @@ const Skills: React.FC<SkillsProps> = ({ className = '' }) => {
                   item.color === 'blue' ? 'text-blue-600' :
                   item.color === 'green' ? 'text-green-600' :
                   item.color === 'purple' ? 'text-purple-600' :
+                  item.color === 'indigo' ? 'text-indigo-700' :
                   'text-orange-600'
                 }`}
               >

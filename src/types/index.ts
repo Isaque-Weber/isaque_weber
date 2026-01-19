@@ -13,7 +13,7 @@ export interface Project {
 export interface Skill {
   name: string;
   level: number;
-  category: 'frontend' | 'backend' | 'database' | 'tools';
+  category: 'frontend' | 'backend' | 'database' | 'tools' | 'data';
   icon?: string;
 }
 

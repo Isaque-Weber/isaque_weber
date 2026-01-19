@@ -18,6 +18,10 @@ export const contactInfo: ContactInfo = {
 };
 
 export const skills: Skill[] = [
+    { name: 'Scikit-learn', level: 90, category: 'data' },
+    { name: 'Pandas', level: 90, category: 'data' },
+    { name: 'NumPy', level: 85, category: 'data' },
+    { name: 'Machine Learning', level: 85, category: 'data' },
     { name: 'React', level: 90, category: 'frontend' },
     { name: 'NextJS', level: 85, category: 'frontend' },
     { name: 'TypeScript', level: 88, category: 'frontend' },
@@ -69,7 +73,7 @@ export const projects: Project[] = [
         id: "itaagroia",
         title: "ItaAgroIA",
         description: "Plataforma de Inteligência Artificial aplicada ao agronegócio, oferecendo análise de solo, consulta de bulas e suporte a decisões agrícolas por meio de chat interativo com IA.",
-        technologies: ["Vite.js", "TailwindCSS", "React", "TypeScript", "Fastify","TypeORM", "PostgreSQL", "IA", "SDKOpenai"],
+        technologies: ["SDKOpenai", "Vite.js", "TailwindCSS", "React", "TypeScript", "Fastify","TypeORM", "PostgreSQL", "IA" ],
         image: "/itaagroia/loginescuro.png",
         gallery: [
             "/itaagroia/loginclaro.png",
@@ -104,6 +108,7 @@ export const projects: Project[] = [
 ];
 
 export const resumes = [
+    { name: 'Currículo Desenvolvedor Data Science', path: '/documents/Isaque_Weber_DataScience.pdf' },
     { name: 'Currículo Desenvolvedor Fullstack', path: '/documents/Isaque_Weber_Dev_Fullstack.pdf' },
     { name: 'Currículo Foco em Backend', path: '/documents/Isaque_Weber_Backend.pdf' },
     { name: 'Currículo Foco em Frontend', path: '/documents/Isaque_Weber_Frontend.pdf' },
