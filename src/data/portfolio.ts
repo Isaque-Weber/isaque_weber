@@ -35,6 +35,17 @@ export const skills: Skill[] = [
 
 export const projects: Project[] = [
     {
+        id: "inboxai",
+        title: "InboxAI",
+        description: "Sistema inteligente para triagem automática de emails e geração de respostas com IA. Utiliza Machine Learning (NLP) para classificar mensagens e Google Gemini para sugerir respostas contextuais. Interface moderna e responsiva.",
+        technologies: ["Python", "FastAPI", "Scikit-learn", "JavaScript", "HTML5", "CSS3", "Google Gemini", "Docker"],
+        image: "/inboxai/cover.png",
+        gallery: ["/inboxai/cover.png"],
+        liveUrl: "https://desafio.isaqueweber.com.br",
+        githubUrl: "https://github.com/Isaque-Weber/email-ai-triage",
+        featured: true
+    },
+    {
         id: "cadpog",
         title: "Site CADPOG",
         description: "Plataforma web institucional para a Catedral das Assembleias de Deus, Deus de Poder e Glória. Inclui páginas de congregações, pedidos de oração, informações sobre a igreja, ministérios e área de doações.",
