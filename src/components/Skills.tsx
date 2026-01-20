@@ -49,7 +49,13 @@ const Skills: React.FC<SkillsProps> = ({ className = '' }) => {
             initial={{ width: 0 }}
             animate={{ width: `${skill.level}%` }}
             transition={{ duration: 1, delay: 0.2 + index * 0.05, ease: "easeOut" }}
-            className="h-full bg-gradient-to-r from-primary-600 to-primary-400 rounded-full relative"
+            className={`h-full rounded-full relative bg-gradient-to-r ${
+              skill.category === 'frontend' ? 'from-blue-600 to-blue-400' :
+              skill.category === 'backend' ? 'from-green-600 to-green-400' :
+              skill.category === 'database' ? 'from-purple-600 to-purple-400' :
+              skill.category === 'data' ? 'from-indigo-600 to-indigo-400' :
+              'from-orange-600 to-orange-400'
+            }`}
           >
             <motion.div
               animate={{ x: [-20, 20, -20] }}

@@ -34,7 +34,14 @@ export const skills: Skill[] = [
     { name: 'Python', level: 85, category: 'backend' },
     { name: 'TypeORM', level: 80, category: 'database' },
     { name: 'BD Relacional', level: 85, category: 'database' },
-    { name: 'Docker', level: 75, category: 'tools' }
+    { name: 'Docker', level: 75, category: 'tools' },
+    { name: 'Node.js', level: 90, category: 'backend' },
+    { name: 'Redis', level: 80, category: 'database' },
+    { name: 'PostgreSQL', level: 85, category: 'database' },
+    { name: 'Tailwind CSS', level: 90, category: 'frontend' },
+    { name: 'Jest', level: 80, category: 'tools' },
+    { name: 'Git', level: 85, category: 'tools' },
+    { name: 'Sentry', level: 75, category: 'tools' }
 ];
 
 export const projects: Project[] = [
@@ -71,9 +78,9 @@ export const projects: Project[] = [
     },
     {
         id: "itaagroia",
-        title: "ItaAgroIA",
-        description: "Plataforma de Inteligência Artificial aplicada ao agronegócio, oferecendo análise de solo, consulta de bulas e suporte a decisões agrícolas por meio de chat interativo com IA.",
-        technologies: ["SDKOpenai", "Vite.js", "TailwindCSS", "React", "TypeScript", "Fastify","TypeORM", "PostgreSQL", "IA" ],
+        title: "ItaAgro",
+        description: "Plataforma SaaS para agrônomos e produtores rurais com assistente de IA para informações sobre defensivos e pragas. Alta performance com Node.js/Fastify e autenticação segura.",
+        technologies: ["Node.js", "Fastify", "TypeScript", "PostgreSQL", "TypeORM", "Redis", "BullMQ", "Sentry", "OpenAI API", "MercadoPago API", "Jest", "Docker", "React", "Vite", "Tailwind CSS"],
         image: "/itaagroia/loginescuro.png",
         gallery: [
             "/itaagroia/loginclaro.png",
