@@ -15,6 +15,7 @@ const Header: React.FC<HeaderProps> = ({ className = '' }) => {
   const navigation = [
     { name: 'Início', href: '#home' },
     { name: 'Sobre', href: '#about' },
+    { name: 'Experiência', href: '#experience' },
     { name: 'Formação', href: '#formation' },
     { name: 'Habilidades', href: '#skills' },
     { name: 'Projetos', href: '#projects' },

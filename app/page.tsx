@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../src/components/Header';
 import Hero from '../src/components/Hero';
 import About from '../src/components/About';
+import Experience from '../src/components/Experience';
 import Formation from '../src/components/Formation';
 import Skills from '../src/components/Skills';
 import Projects from '../src/components/Projects';
@@ -15,6 +16,7 @@ export default function Home() {
       <main>
         <Hero />
         <About />
+        <Experience />
         <Formation />
         <Skills />
         <Projects />

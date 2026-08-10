@@ -65,3 +65,16 @@ export interface FormationInfo {
   status: 'Concluído' | 'Em andamento' | 'Trancado';
   year?: string;
 }
+
+export interface ExperienceInfo {
+  id: string;
+  role: string;
+  company: string;
+  logo?: string;
+  period: string;
+  location?: string;
+  type?: string;
+  description: string;
+  highlights: string[];
+  skills?: string[];
+}
