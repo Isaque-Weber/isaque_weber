@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Code, Lightbulb, Users, Award } from 'lucide-react';
+import { Code, BookOpen, Database, Award } from 'lucide-react';
 
 interface AboutProps {
   className?: string;
@@ -11,23 +11,23 @@ const About: React.FC<AboutProps> = ({ className = '' }) => {
   const highlights = [
     {
       icon: Code,
-      title: 'Desenvolvimento Full-Stack',
-      description: 'Experiência sólida em tecnologias frontend e backend, criando soluções completas e escaláveis.'
+      title: 'Desenvolvimento & IA',
+      description: 'Engenharia de software e criação de aplicações completas integrando modelos de Inteligência Artificial.'
     },
     {
-      icon: Lightbulb,
-      title: 'Soluções em IA',
-      description: 'Especializado em implementar inteligência artificial para democratizar o acesso à tecnologia.'
+      icon: BookOpen,
+      title: 'Ensino & Capacitação',
+      description: 'Instrutor no Senac RJ em Dados e Big Data, aplicando treinamentos corporativos de novas plataformas.'
     },
     {
-      icon: Users,
-      title: 'Trabalho em Equipe',
-      description: 'Colaboração efetiva em projetos multidisciplinares com foco em resultados de qualidade.'
+      icon: Database,
+      title: 'Big Data & Analytics',
+      description: 'Estruturação de dados, análises preditivas e pipelines eficientes para tomada de decisão.'
     },
     {
       icon: Award,
-      title: 'Qualidade de Código',
-      description: 'Comprometimento com boas práticas, código limpo e arquiteturas bem estruturadas.'
+      title: 'Arquitetura & Qualidade',
+      description: 'Comprometimento com código limpo, boas práticas, escalabilidade e excelente experiência de usuário.'
     }
   ];
 
@@ -57,22 +57,22 @@ const About: React.FC<AboutProps> = ({ className = '' }) => {
               className="space-y-6 text-gray-600 dark:text-gray-300 leading-relaxed"
             >
               <p>
-                Sou um <strong className="text-gray-900 dark:text-white">Desenvolvedor de Sistemas</strong> apaixonado 
-                por criar soluções inovadoras que tornam a tecnologia mais acessível e útil para todos. 
-                Meu foco principal está no desenvolvimento de aplicações que integram 
-                <strong className="gradient-text"> Inteligência Artificial</strong> de forma prática e eficiente.
+                Sou um <strong className="text-gray-900 dark:text-white">Desenvolvedor de Sistemas e Especialista em Dados</strong> que 
+                une a paixão por criar software de alta performance com a missão de democratizar o conhecimento tecnológico. 
+                Atualmente, vivo um momento especial como <strong className="gradient-text">Instrutor de Dados e Big Data no Senac RJ</strong>, 
+                onde ministro aulas e capacito equipes corporativas na adoção de novas plataformas digitais.
               </p>
               
               <p>
-                Com experiência em tecnologias modernas como <strong>React, NextJS, NestJS, Python e FastAPI</strong>, 
-                busco sempre entregar soluções robustas que não apenas atendem aos requisitos técnicos, 
-                mas também proporcionam uma excelente experiência do usuário.
+                Minha essência permanece fortemente técnica e mão na massa: domino o ecossistema moderno com 
+                <strong> React, Next.js, Node.js, Python, FastAPI e Engenharia de Dados</strong>. 
+                Acredito que ensinar é uma das formas mais nobres de aprimorar a engenharia de software — pois transformar 
+                conceitos complexos em aulas didáticas exige clareza, código limpo e arquiteturas bem estruturadas.
               </p>
               
               <p>
-                Acredito que a tecnologia deve ser uma ferramenta de democratização do conhecimento, 
-                e é com essa visão que trabalho em cada projeto, sempre buscando a excelência 
-                e a inovação em cada linha de código.
+                Seja desenvolvendo sistemas SaaS inteligentes alimentados por IA ou formando profissionais em Big Data, 
+                meu foco é constante: construir soluções robustas, escaláveis e que gerem impacto real para pessoas e negócios.
               </p>
             </motion.div>
 
