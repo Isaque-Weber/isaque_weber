@@ -1,12 +1,12 @@
-import { PersonalInfo, FormationInfo, ContactInfo, Skill, Project } from '@/types';
+import { PersonalInfo, FormationInfo, ContactInfo, Skill, Project, ExperienceInfo } from '@/types';
 import profileImage from '../../public/images/Perfil2.jpg';
 
 export const personalInfo: PersonalInfo = {
     name: 'Isaque Weber',
-    title: 'Desenvolvedor de Sistemas',
-    description: 'Desenvolvo soluções aplicadas à IA, para a democratização do uso de IA',
+    title: 'Instrutor & Desenvolvedor de Dados / IA',
+    description: 'Desenvolvo soluções aplicadas a IA e Big Data, atuando no ensino e democratização da tecnologia',
     avatar: profileImage.src,
-    resumeUrl: '/documents/Currículo_Isaque_Weber.pdf'
+    resumeUrl: '/documents/Isaque_Weber_DataScience.pdf'
 };
 
 export const contactInfo: ContactInfo = {
@@ -144,4 +144,24 @@ export const formation: FormationInfo[] = [
         status: "Concluído"
     }
 ];
+
+export const experiences: ExperienceInfo[] = [
+    {
+        id: "1",
+        role: "Instrutor de Dados e Big Data",
+        company: "Senac RJ",
+        logo: "/images/senac.png",
+        period: "Abril de 2026 – Presente",
+        location: "Rio de Janeiro, RJ",
+        type: "Presencial & Remoto",
+        description: "Ministração de aulas e treinamentos corporativos especializados em Dados, Big Data e novas tecnologias.",
+        highlights: [
+            "Ministração de aulas presenciais e remotas nos módulos de Data Science, Análise de Dados e Big Data.",
+            "Planejamento e aplicação de treinamentos internos para colaboradores sobre a implementação e adoção de novas ferramentas/plataformas tecnológicas.",
+            "Desenvolvimento de projetos práticos e mentoria técnica focada em soluções orientadas a dados e IA."
+        ],
+        skills: ["Big Data", "Data Science", "Python", "Machine Learning", "Treinamento Corporativo", "Análise de Dados"]
+    }
+];
+
 

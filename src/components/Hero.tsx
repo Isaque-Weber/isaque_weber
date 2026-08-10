@@ -131,7 +131,9 @@ const Hero: React.FC<HeroProps> = ({ className = '' }) => {
               
               <motion.div 
                 whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }} >
+                whileTap={{ scale: 0.95 }}
+                className="relative z-30"
+              >
                 <ResumeList />
               </motion.div>
             </motion.div>
